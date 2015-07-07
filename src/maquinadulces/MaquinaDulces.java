@@ -5,6 +5,9 @@
  */
 package maquinadulces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Geek
@@ -16,6 +19,31 @@ public class MaquinaDulces {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        EstadoInicial es = new EstadoInicial();
+        GiroInicial gi = new GiroInicial();
+        DarDulce dr = new DarDulce();
+        ArrayList<Estado> l = new ArrayList<>();
+        l.add(es);
+        l.add(gi);
+        l.add(dr);
+        MaquinaDelMal m = new MaquinaDelMal(l);
+        
+        m.procesar();
+        m.procesar();
+        m.procesar();
+        m.setMoneda(true);
+        m.procesar();
+        m.procesar();
+        m.procesar();
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
